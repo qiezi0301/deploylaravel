@@ -4,5 +4,5 @@
     cd /home/www/deploylaravel
     git pull origin master
     composer install --no-dev
-    php artisan migrate --force
+    php artisan migrate --f
 @endtask

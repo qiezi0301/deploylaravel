@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Deploy Laravel Hello word
+                    mysql Laravel Hello word
                 </div>
 
                 <div class="links">
