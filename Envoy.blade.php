@@ -2,9 +2,8 @@
 
 @task('deploy', ['on' => ['web-1', 'web-2'], 'parallel' => true])
     cd /home/www/deploylaravel
-    @if ($branch)
-        git pull origin {{ $branch }}
-    @endif
+    git reset --hard
+    git pull origin {{ $branch }}
     chown -R www:www /home/www
     chmod -R 755 /home/www
     su - www
