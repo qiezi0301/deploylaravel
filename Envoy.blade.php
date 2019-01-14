@@ -4,7 +4,8 @@
     cd /var/www/deploylaravel
 
     git pull origin {{ $branch }}
-
+    su - www
+    cd /var/www/deploylaravel
     composer install --no-dev
     php artisan migrate --force
 @endtask
