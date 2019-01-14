@@ -3,6 +3,8 @@
 @task('deploy', ['on' => ['web-1', 'web-2'], 'parallel' => true])
     cd /home/www/deploylaravel
     git pull origin master
+    chown -R nginx:nginx /home/www
+    chmod -R 755 /home/www
     composer install --no-dev
-    php artisan migrate --f
+    php artisan migrate
 @endtask

@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    mysql Laravel Hello word
+                    <span>{{$_SERVER['SERVER_NAME']}} [ {{ $_SERVER['REMOTE_ADDR'] }} ]</span>
                 </div>
 
                 <div class="links">
