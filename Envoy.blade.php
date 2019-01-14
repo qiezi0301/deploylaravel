@@ -2,9 +2,13 @@
 
 @task('deploy', ['on' => ['web-1', 'web-2'], 'parallel' => true])
     cd /home/www/deploylaravel
-    git pull origin master
-    chown -R nginx:nginx /home/www
+    @if ($branch)
+        git pull origin {{ $branch }}
+    @endif
+    chown -R www:www /home/www
     chmod -R 755 /home/www
+    su - www
+    cd /home/www/deploylaravel
     composer install --no-dev
-    php artisan migrate
+    php artisan migrate --force
 @endtask
