@@ -2,11 +2,9 @@
 
 @task('deploy', ['on' => ['web-1', 'web-2', 'web-3'], 'parallel' => true])
     cd /var/www/deploylaravel
-    git reset --hard
+
     git pull origin {{ $branch }}
-    chown -R www /var/www
-    su - www
-    cd /var/www/deploylaravel
+
     composer install --no-dev
     php artisan migrate --force
 @endtask

@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <span>{{$_SERVER['SERVER_NAME']}} [ {{ $_SERVER['REMOTE_ADDR'] }} ]</span> :branch
+                    queue
                 </div>
 
                 <div class="links">
